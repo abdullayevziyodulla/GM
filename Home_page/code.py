@@ -43,63 +43,19 @@ class Home_page(QMainWindow):
         """)
         self.btn1.setFont(self.font)
 
-        self.btn2 = QPushButton("Haridlar", self)
-        self.btn2.setGeometry(390, 20, 171, 41)
-        self.btn2.setStyleSheet("""
-            QPushButton {
-                background-color: rgba(0, 0, 0, 0);
-                color: white;
-                border: none;
-            }
-            QPushButton:hover {
-                color: blue;
-            }
+        self.center_box = QTextBrowser(self)
+        self.center_box.setText("""
+        <h1>GM haqida ma'lumot</h1>
+        General Motors kompaniyasi dunyodagi eng katta avtomobil ishlab chiqaruvchilardan biri hisoblanadi. Kompaniya o'zining ko'plab avtomobil brendlari bilan tanilgan, masalan:
+        <ul>
+        <li>Chevrolet: Boshqa brendlar orasida mashhur bo'lgan bu markaning turli modellari mavjud.</li>
+        <li>Buick: Premium va qulay avtomobillar ishlab chiqaradi.</li>
+        <li>GMC: Asosan yuk mashinalari va SUV-lar bilan tanilgan.</li>
+        <li>Cadillac: Luxury segmentda joylashgan brend.</li>
+        </ul>
+        GM ning asosiy boshqaruv markazi Detroit, Michigan shahrida joylashgan. Kompaniya avtomobillar, yuk mashinalari va boshqa transport vositalarini ishlab chiqaradi va dunyo bo'ylab sotadi.
+        GM avtomobil sanoatida innovatsion texnologiyalarni rivojlantirish bilan ham mashhur, jumladan elektr va gidrojenli avtomobillar bo'yicha yangi loyihalar ustida ishlaydi
         """)
-        self.btn2.setFont(self.font)
-
-        self.btn3 = QPushButton("Ehtiyot qisimlar", self)
-        self.btn3.setGeometry(570, 20, 171, 41)
-        self.btn3.setStyleSheet("""
-            QPushButton {
-                background-color: rgba(0, 0, 0, 0);
-                color: white;
-                border: none;
-            }
-            QPushButton:hover {
-                color: blue;
-            }
-        """)
-        self.btn3.setFont(self.font)
-
-        self.search = QLineEdit(self)
-        self.search.setGeometry(1600, 20, 280, 50)
-        self.search.setPlaceholderText("Search...")
-        self.search.setStyleSheet("""
-            border: 2px solid blue; 
-            border-radius: 20px;  
-        """)
-        self.search.setFont(QFont("Arial", 20))
-
-        self.btn.clicked.connect(self.cmp)
-
-    def cmp(self):
-        self.center_box = QLabel("""
-General Motors Company (GM) - Amerika Qo'shma Shtatlaridagi mashhur avtomobil ishlab chiqaruvchi kompaniya.
-
-GM 1908-yilda tashkil etilgan va dunyodagi eng katta avtomobil ishlab chiqaruvchilardan biri hisoblanadi. Kompaniya o'zining ko'plab avtomobil brendlari bilan tanilgan, masalan:
-
-Chevrolet: Boshqa brendlar orasida mashhur bo'lgan bu markaning turli modellari mavjud.
-
-Buick: Premium va qulay avtomobillar ishlab chiqaradi.
-
-GMC: Asosan yuk mashinalari va SUV-lar bilan tanilgan.
-
-Cadillac: Luxury segmentda joylashgan brend.
-
-GM ning asosiy boshqaruv markazi Detroit, Michigan shahrida joylashgan. Kompaniya avtomobillar, yuk mashinalari va boshqa transport vositalarini ishlab chiqaradi va dunyo bo'ylab sotadi.
-
-GM avtomobil sanoatida innovatsion texnologiyalarni rivojlantirish bilan ham mashhur, jumladan elektr va gidrojenli avtomobillar bo'yicha yangi loyihalar ustida ishlaydi
-""", self)
         self.center_box.move(50, 100)
         self.center_box.setFont(self.font)
         self.center_box.setStyleSheet('background-color: lightblue; border-radius: 15px;')
@@ -132,7 +88,6 @@ GM avtomobil sanoatida innovatsion texnologiyalarni rivojlantirish bilan ham mas
     def hidee(self):
         self.hide.hide()
         self.center_box.hide()
-
 
 
 app = QApplication([])
